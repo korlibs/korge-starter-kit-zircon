@@ -14,10 +14,10 @@ suspend fun main() = Korge(
     title = "Zircon KorGE",
     debug = false,
 ) {
-    sceneContainer().changeTo { ZirconGame(1280, 720) }
+    sceneContainer().changeTo { ZirconGame() }
 }
 
-class ZirconGame(width: Int, height: Int) : BaseZirconKorgeScene(width, height) {
+class ZirconGame() : BaseZirconKorgeScene(1280, 720) {
     override fun gameMain() {
         screen.addComponent(buildVbox {
             lateinit var textArea: TextArea
